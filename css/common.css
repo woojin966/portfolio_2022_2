@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Blinker:wght@300;400;600;700&display=swap');
+
+html, body {position: relative; height: 100%;}
+body {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+body::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+}
+header{width: 100%; padding: 0 10%; background-color: #4580eb; position: absolute; display: flex; align-items: center; justify-content: space-between;}
+.homeBtn{padding: 15px 0; width: 30px; text-align: center; font-size: 20px;}
+.hBtnbox{display: inline-block; text-align: right; width: calc(100% - 30px);}
+.profile{font-family: 'Blinker', sans-serif; font-size: 24px; font-weight: 400; padding: 15px;}
+.sitemap{position: relative; height: 20px; width: 30px;}
+.sitemap span{position: absolute; width: 100%; height: 2px; background-color: #000; left: 0;}
+.sitemap span:first-child{top: 0;}
+.sitemap span:nth-child(2){top: calc(50% - 2px);}
+.sitemap span:last-child{bottom: 0;}
+main{width: 100%; min-width: 1920px; height: 100vh; min-height: 937px;}
+
+.contentWrap{width: 100%; height: 100%; padding: 150px 10%; background-color: #4580eb; display: flex;}
+.titleBox{width: 30%;}
+.titleBox p{font-family: 'Blinker', sans-serif;}
+.titleBox .title{font-size: 80px; font-weight: 600; line-height: .8; margin-bottom: 20px;}
+.titleBox .sub{font-size: 36px;}
+.contentBox{width: 70%; overflow: hidden; position: relative;}
+.swiper-slide{width: 30%;}
+.imgBox{width: 100%; height: 60%; margin-bottom: 20px; overflow: hidden; background-color: bisque; transition: .4s;}
+.swiper-slide-active .imgBox{height: 70%; transition: .4s;}
+.imgBox img{width: 100%;}
+.swiper-button-next, .swiper-button-prev{top: unset; bottom: 0; width: 60px; height: 60px;}
+.swiper-button-next{right: 0;}
+.swiper-button-prev{left: 90%;}
+.swiper-button-next:after{content: ''; width: 30px; height: 30px; border-top: solid #000; border-right: 2px solid #000; transform: rotate(45deg);}
+.swiper-button-prev:after{content: ''; width: 30px; height: 30px; border-top: solid #000; border-left: 2px solid #000; transform: rotate(-45deg);}

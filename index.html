@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <script src="https://kit.fontawesome.com/9f52183145.js" crossorigin="anonymous"></script>
+    <title>porifolio 2022</title>
+</head>
+<body>
+    <header>
+        <a class="homeBtn" href="javascript:void(0)">
+            <i class="fa-solid fa-house"></i>
+        </a>
+        <div class="hBtnbox">
+            <a class="profile" href="javascript:void(0)">PROFILE</a>
+            <a class="sitemap" href="javascript:void(0)">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </div>
+    </header>
+    <main>
+        <div class="contentWrap">
+            <div class="titleBox">
+                <p class="title">PORTFOLIO<br>2022</p>
+                <p class="sub">PUBLISHING /<br> UIUX /<br> EDITORIAL</p>
+            </div>
+            <div class="contentBox">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a class="imgBox" href="javascript:void(0)">
+                            <img class="tumbnailImg" src="" alt="thumnail">
+                        </a>
+                        <div class="textBox">
+                            <p class="name">국가과학난제도전</p>
+                            <p class=""></p>
+                            <a class="link" href="javascript:void(0)">Go to Site</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide" href="javascript:void(0)">
+                        <a class="imgBox">
+                            <img class="tumbnailImg" src="" alt="thumnail">
+                        </a>
+                        <div class="textBox">
+                            <p class="name">노브랜드버거</p>
+                            <p class=""></p>
+                            <a class="link" href="javascript:void(0)">PROTOTYPE</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <a class="imgBox" href="javascript:void(0)">
+                            <img class="tumbnailImg" src="" alt="thumnail">
+                        </a>
+                        <div class="textBox">
+                            <p class="name">국립발레단</p>
+                            <p class=""></p>
+                            <a class="link" href="javascript:void(0)">PROTOTYPE</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <a class="imgBox" href="javascript:void(0)">
+                            <img class="tumbnailImg" src="" alt="thumnail">
+                        </a>
+                        <div class="textBox">
+                            <p class="name">EDITORIAL PORTFOLIO</p>
+                            <p class=""></p>
+                            <a class="link" href="javascript:void(0)">View Portfolio</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide invisibleSlide"></div>
+                    <div class="swiper-slide invisibleSlide"></div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+            var swiper = new Swiper(".contentBox", {
+                slidesPerView: "auto",
+                spaceBetween: 20,
+                freeMode: true,
+                grabCursor: true,
+                navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+                },
+            });
+        });
+      </script>
+</body>
+</html>
