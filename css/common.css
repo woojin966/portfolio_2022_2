@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Blinker:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
 
 html, body {position: relative; height: 100%;}
 body {
@@ -20,17 +21,31 @@ header{width: 100%; padding: 0 10%; background-color: #4580eb; position: absolut
 main{width: 100%; min-width: 1920px; height: 100vh; min-height: 937px;}
 
 .contentWrap{width: 100%; height: 100%; padding: 150px 10%; background-color: #4580eb; display: flex;}
-.titleBox{width: 30%;}
-.titleBox p{font-family: 'Blinker', sans-serif;}
-.titleBox .title{font-size: 80px; font-weight: 600; line-height: .8; margin-bottom: 20px;}
-.titleBox .sub{font-size: 36px;}
-.contentBox{width: 70%; overflow: hidden; position: relative;}
+.titleBox{width: 28%;}
+.titleBox .title{font-size: 80px; font-weight: 600; line-height: .8; margin-bottom: 20px; font-family: 'Blinker', sans-serif;}
+.titleBox .subBtn{font-size: 36px; display: inline-block; font-family: 'Blinker', sans-serif; margin-bottom: 5px; position: relative; z-index: 0;}
+.titleBox .subBtn:before{content:''; position: absolute; bottom: 0; left: 0; width: 100%; height: 3px; background: #000; transition: .4s; z-index: -1;}
+.titleBox .subBtn:hover{color: #fff; transition: .4s;}
+.titleBox .subBtn:hover:before{height: 100%; transition: .4s;}
+.titleBox .activeBtn{color: #fff;}
+.titleBox .activeBtn:before{height: 100%;}
+.contentBox{width: 75%; overflow: hidden; position: relative; }
 .swiper-slide{width: 30%;}
-.imgBox{width: 100%; height: 60%; margin-bottom: 20px; overflow: hidden; background-color: bisque; transition: .4s;}
-.swiper-slide-active .imgBox{height: 70%; transition: .4s;}
+.imgBox{width: 100%; height: 50%; margin-bottom: 20px; overflow: hidden; background-color: bisque; transition: .4s;}
+.swiper-slide-active .imgBox{height: 60%; transition: .4s;}
 .imgBox img{width: 100%;}
-.swiper-button-next, .swiper-button-prev{top: unset; bottom: 0; width: 60px; height: 60px;}
+.swiper-button-next, .swiper-button-prev{top: unset; bottom: 0; width: 50px; height: 50px;}
 .swiper-button-next{right: 0;}
 .swiper-button-prev{left: 90%;}
-.swiper-button-next:after{content: ''; width: 30px; height: 30px; border-top: solid #000; border-right: 2px solid #000; transform: rotate(45deg);}
-.swiper-button-prev:after{content: ''; width: 30px; height: 30px; border-top: solid #000; border-left: 2px solid #000; transform: rotate(-45deg);}
+.swiper-button-next:after{content: ''; width: 25px; height: 25px; border-top: solid #000; border-right: 2px solid #000; transform: rotate(45deg);}
+.swiper-button-prev:after{content: ''; width: 25px; height: 25px; border-top: solid #000; border-left: 2px solid #000; transform: rotate(-45deg);}
+
+.textBox p{font-family: 'Noto Sans KR', sans-serif;}
+.textBox .name{font-size: 20px; font-weight: bold; margin-bottom: 10px;}
+.textBox .describe{font-size: 16px; font-weight: 300; line-height: 1.4;}
+.textBox .describe b{font-weight: bold;}
+.iconBox{margin: 10px 0;}
+.iconBox img{display: inline-block; width: 30px; height: 30px; margin-right: 5px; background-color: #f5f5f5;}
+.iconBox img:last-child{margin-right: 0;}
+.textBox a{font-family: 'Blinker', sans-serif; padding: 10px; margin-top: 10px; font-size: 20px; border: 2px solid #000; transition: .4s;}
+.textBox a:hover{background-color: #000; color: #fff; transition: .4s;}

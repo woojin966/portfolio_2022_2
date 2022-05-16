@@ -28,47 +28,75 @@
         <div class="contentWrap">
             <div class="titleBox">
                 <p class="title">PORTFOLIO<br>2022</p>
-                <p class="sub">PUBLISHING /<br> UIUX /<br> EDITORIAL</p>
+                <a class="subBtn pbBtn activeBtn" href="javascript:void(0)">PUBLISHING /</a><br>
+                <a class="subBtn uixBtn" href="javascript:void(0)">UIUX /</a><br>
+                <a class="subBtn edBtn" href="javascript:void(0)">EDITORIAL</a>
             </div>
             <div class="contentBox">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <a class="imgBox" href="javascript:void(0)">
+                    <div class="swiper-slide pbSlide">
+                        <a class="imgBox" href="https://www.nscn.or.kr/">
                             <img class="tumbnailImg" src="" alt="thumnail">
                         </a>
                         <div class="textBox">
                             <p class="name">국가과학난제도전</p>
-                            <p class=""></p>
-                            <a class="link" href="javascript:void(0)">Go to Site</a>
+                            <p class="describe describe1"><b>포지션 / </b>publishing, uiux design</p>
+                            <p class="describe describe2"><b>제작기간 / </b>2021. 04 ~ 07</p>
+                            <div class="iconBox">
+                                <img class="toolIcon xd" src="" alt="toolIcon">
+                                <img class="toolIcon php" src="" alt="toolIcon">
+                                <img class="toolIcon html" src="" alt="toolIcon">
+                                <img class="toolIcon css" src="" alt="toolIcon">
+                                <img class="toolIcon jquery" src="" alt="toolIcon">
+                            </div>
+                            <a class="link" href="https://www.nscn.or.kr/">Go to Site</a>
                         </div>
                     </div>
-                    <div class="swiper-slide" href="javascript:void(0)">
-                        <a class="imgBox">
+                    <div class="swiper-slide uixSlide">
+                        <a class="imgBox" href="https://xd.adobe.com/view/64098406-8c3a-4753-ad64-b0f48f80cd00-315a/?fullscreen&hints=off">
                             <img class="tumbnailImg" src="" alt="thumnail">
                         </a>
                         <div class="textBox">
                             <p class="name">노브랜드버거</p>
-                            <p class=""></p>
-                            <a class="link" href="javascript:void(0)">PROTOTYPE</a>
+                            <p class="describe describe1">웹사이트 리디자인</p>
+                            <p class="describe describe2">개인작업</p>
+                            <div class="iconBox">
+                                <img class="toolIcon xd" src="" alt="toolIcon">
+                                <img class="toolIcon illustrator" src="" alt="toolIcon">
+                                <img class="toolIcon photoshop" src="" alt="toolIcon">
+                            </div>
+                            <a class="link" href="https://xd.adobe.com/view/64098406-8c3a-4753-ad64-b0f48f80cd00-315a/?fullscreen&hints=off">Prototype</a>
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <a class="imgBox" href="javascript:void(0)">
+                        <a class="imgBox" href="https://xd.adobe.com/view/804c4d3c-8a23-4774-bec5-934128a09718-d51f/?fullscreen&hints=off">
                             <img class="tumbnailImg" src="" alt="thumnail">
                         </a>
                         <div class="textBox">
                             <p class="name">국립발레단</p>
-                            <p class=""></p>
-                            <a class="link" href="javascript:void(0)">PROTOTYPE</a>
+                            <p class="describe describe1">웹사이트 리디자인</p>
+                            <p class="describe describe2">개인작업</p>
+                            <div class="iconBox">
+                                <img class="toolIcon xd" src="" alt="toolIcon">
+                                <img class="toolIcon illustrator" src="" alt="toolIcon">
+                                <img class="toolIcon photoshop" src="" alt="toolIcon">
+                            </div>
+                            <a class="link" href="https://xd.adobe.com/view/804c4d3c-8a23-4774-bec5-934128a09718-d51f/?fullscreen&hints=off">Prototype</a>
                         </div>
                     </div>
-                    <div class="swiper-slide">
+                    <div class="swiper-slide edSlide">
                         <a class="imgBox" href="javascript:void(0)">
                             <img class="tumbnailImg" src="" alt="thumnail">
                         </a>
                         <div class="textBox">
                             <p class="name">EDITORIAL PORTFOLIO</p>
-                            <p class=""></p>
+                            <p class="describe describe1">편집디자인 작업물</p>
+                            <p class="describe describe2">2016 ~ 2020</p>
+                            <div class="iconBox">
+                                <img class="toolIcon Indesign" src="" alt="toolIcon">
+                                <img class="toolIcon illustrator" src="" alt="toolIcon">
+                                <img class="toolIcon photoshop" src="" alt="toolIcon">
+                            </div>
                             <a class="link" href="javascript:void(0)">View Portfolio</a>
                         </div>
                     </div>
@@ -94,6 +122,35 @@
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
                 },
+            });
+
+            $('.pbBtn').click(function(){
+                swiper.slideTo( 0 , 2000 );
+                $('.activeBtn').removeClass('activeBtn');
+                $('.pbBtn').addClass('activeBtn');
+            });
+            $('.uixBtn').click(function(){
+                swiper.slideTo( 1 , 2000 );
+                $('.activeBtn').removeClass('activeBtn');
+                $('.uixBtn').addClass('activeBtn');
+            });
+            $('.edBtn').click(function(){
+                swiper.slideTo( 3 , 2000 );
+                $('.activeBtn').removeClass('activeBtn');
+                $('.edBtn').addClass('activeBtn');
+            });
+
+            swiper.on('slideChange', function(){
+                if(this.activeIndex === 0){
+                    $('.activeBtn').removeClass('activeBtn');
+                    $('.pbBtn').addClass('activeBtn');
+                }else if(this.activeIndex === 1){
+                    $('.activeBtn').removeClass('activeBtn');
+                    $('.uixBtn').addClass('activeBtn');
+                }else if(this.activeIndex === 3){
+                    $('.activeBtn').removeClass('activeBtn');
+                    $('.edBtn').addClass('activeBtn');
+                }       
             });
         });
       </script>
