@@ -130,46 +130,93 @@
             <div class="profileBox profileNone">
                 <div class="profileTop">
                     <div class="profilecont profilephoto">
-                        <img src="img/profile.png">
+                        
                     </div>
                     <div class="profilecont profileName">
                         <h2>金 藝 智</h2>
                         <p class="nameKorean aaa">김예지  ·  Kim Yeji</p>
                     </div>
                     <div class="profilecont profileContact">
-                        <h2>Contact</h2>
+                        <h2>CONTACT</h2>
                         <p class="profileMail">woojin_966@naver.com</p>
-                        <!-- <p class="profilInvisible">invisible</p> -->
                     </div>
                 </div>
                 <div class="profileBottom">
-                    <div class="profilecontfull profileSkill">
-                        <h2>Skills</h2>
-                        <div class="profileContent profileSkill">
-                            <span class="skillIcon Photoshop">PHOTO<br>SHOP</span>
-                            <span class="skillIcon Illustrator">ILLUST<br>RATOR</span>
-                            <span class="skillIcon Indesign">IN<br>DESIGN</span>
-                            <span class="skillIcon Xd">XD</span>
-                            <span class="skillIcon html5">HTML</span>
-                            <span class="skillIcon css">CSS</span>
-                            <span class="skillIcon jquery">JQEURY</span>
+                    <div class="profilecontfull">
+                        <h2>SKILLS</h2>
+                        <div class="pcfBox profileSkill">
+                            <div class="pbBox">
+                                <i class="fa-brands fa-php"></i>
+                                <i class="fa-brands fa-html5"></i>
+                                <i class="fa-brands fa-css3-alt"></i>
+                                <i class="fa-brands fa-js-square"></i>
+                            </div>
+                            <div class="designBox">
+                                <span class="skillIcon xd">XD</span>
+                                <span class="skillIcon il">ILLUST</span>
+                                <span class="skillIcon ps">PHOTOSHOP</span>
+                                <span class="skillIcon id">INDESIGN</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="profilecontfull profileCareer">
-                        <h2>Career</h2>
-                        <div class="profileContent">
+                    <div class="profilecontfull">
+                        <h2>CAREER</h2>
+                        <div class="pcfBox profileCareer">
                             <div>
                                 <p class="careerYear">2014 ~ 2019</p>
                                 <p class="careerJob">편집디자이너<span> / 주품디자인 외 동종업계</span></p>
                             </div>
                             <div>
-                                <p class="careerYear">2020 ~ 2021</p>
-                                <p class="careerJob">Web/Uiux디자이너, 퍼블리셔<span> / HSM CLOUDIPIA</span></p>
+                                <p class="careerYear">2020 ~ </p>
+                                <p class="careerJob">퍼블리셔, UiUX디자이너<span> / HSM CLOUDIPIA / (주)GSA 미앤미 네트워크</span></p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="sitemapBox">
+                <ul>
+                    <li>
+                        <dl>
+                            <dt>
+                                <a class="siteMenu siteMpb" href="https://www.nscn.or.kr/">PUBLISHING</a>
+                            </dt>
+                            <dd>
+                                <a class="siteSub nscn" href="https://www.nscn.or.kr/">국가과학난제도전</a>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>
+                                <a class="siteMenu siteMpb" href="https://xd.adobe.com/view/64098406-8c3a-4753-ad64-b0f48f80cd00-315a/?fullscreen&hints=off">UIUX</a>
+                            </dt>
+                            <dd>
+                                <a class="siteSub nbb" href="https://xd.adobe.com/view/64098406-8c3a-4753-ad64-b0f48f80cd00-315a/?fullscreen&hints=off">노브랜드버거</a>
+                                <a class="siteSub knb" href="https://xd.adobe.com/view/804c4d3c-8a23-4774-bec5-934128a09718-d51f/?fullscreen&hints=off">국립발레단</a>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>
+                                <a class="siteMenu siteMpb" href="javascript:void(0)">EDITORIAL</a>
+                            </dt>
+                            <dd>
+                                <a class="siteSub editoral" href="javascript:void(0)">EDITORIAL PORTFOLIO</a>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>
+                                <a class="siteMenu siteProfile" href="javascript:void(0)">PROFILE</a>
+                            </dt>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+            <div class="sitemapBg"></div>
         </div>
     </main>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -192,16 +239,31 @@
                 swiper.slideTo( 0 , 2000 );
                 $('.activeBtn').removeClass('activeBtn');
                 $('.pbBtn').addClass('activeBtn');
+                if($('.profileBtn').hasClass('on')){
+                    $('.profileBtn').removeClass('on');
+                    $('.contentBox').removeClass('contentNone');
+                    $('.profileBox').addClass('profileNone');
+                }
             });
             $('.uixBtn').click(function(){
                 swiper.slideTo( 1 , 2000 );
                 $('.activeBtn').removeClass('activeBtn');
                 $('.uixBtn').addClass('activeBtn');
+                if($('.profileBtn').hasClass('on')){
+                    $('.profileBtn').removeClass('on');
+                    $('.contentBox').removeClass('contentNone');
+                    $('.profileBox').addClass('profileNone');
+                }
             });
             $('.edBtn').click(function(){
                 swiper.slideTo( 3 , 2000 );
                 $('.activeBtn').removeClass('activeBtn');
                 $('.edBtn').addClass('activeBtn');
+                if($('.profileBtn').hasClass('on')){
+                    $('.profileBtn').removeClass('on');
+                    $('.contentBox').removeClass('contentNone');
+                    $('.profileBox').addClass('profileNone');
+                }   
             });
 
             swiper.on('slideChange', function(){
@@ -221,6 +283,9 @@
                 var PROFILE = $(this);
                 var SMILE = PROFILE.children('img.rotateSmile');
                 SMILE.attr('src','img/smile_hover.png');
+                if(PROFILE.hasClass('on')){
+                    SMILE.attr('src','img/smile_back.png');
+                }
             });
             $('.profileBtn').mouseout(function(){
                 var PROFILE = $(this);
@@ -236,9 +301,46 @@
                     $('.profileBox').addClass('profileNone');
                 }else{
                     PORFILE_ACT.addClass('on');
-                    $('.activeBtn').removeClass('activeBtn');
+                    $('.subBtn').removeClass('activeBtn');
                     $('.contentBox').addClass('contentNone');
                     $('.profileBox').removeClass('profileNone');
+                    $('.homeBtn').on('click', function(){
+                        $('.profileBtn').removeClass('on');
+                        $('.contentBox').removeClass('contentNone');
+                        $('.profileBox').addClass('profileNone');
+                        $('.pbBtn').addClass('activeBtn');
+                        swiper.slideTo( 0 , 2000 );
+                    });
+                }
+            });
+
+            $('.sitemap').on('click', function(){
+                var SITEMAP = $(this);
+                if(SITEMAP.hasClass('on')){
+                    SITEMAP.removeClass('on');
+                    $('.sitemapBox').removeClass('sitemapBlk');
+                    $('.sitemapBg').removeClass('bgon');
+                }else{
+                    SITEMAP.addClass('on');
+                    $('.sitemapBox').addClass('sitemapBlk');
+                    $('.sitemapBg').addClass('bgon');
+                }
+            });
+            $('.sitemapBg').on('click', function(){
+                $('.sitemap').removeClass('on');
+                $('.sitemapBox').removeClass('sitemapBlk');
+                $('.sitemapBg').removeClass('bgon');
+            });
+
+            $('.siteProfile').on('click', function(){
+                $('.sitemap').removeClass('on');
+                $('.sitemapBox').removeClass('sitemapBlk');
+                $('.sitemapBg').removeClass('bgon');
+                $('.activeBtn').removeClass('activeBtn');
+                if($('.profileBox').hasClass('profileNone')){
+                    $('.profileBtn').addClass('on');
+                    $('.profileBox').removeClass('profileNone');
+                    $('.contentBox').addClass('contentNone');
                 }
             });
         });
