@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Blinker:wght@300;400;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
 
-html, body {position: relative; height: 100%;}
+html, body {position: relative; width: 100%; min-width: 1920px; height: 100%; min-height: 937px;}
 body {
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
@@ -9,37 +9,54 @@ body {
 body::-webkit-scrollbar {
     display: none; /* Chrome, Safari, Opera*/
 }
+@media (min-width: 1920px){
+    body {
+        -ms-overflow-style: scrollbar; /* IE and Edge */
+        scrollbar-width: 5px; /* Firefox */
+    }
+    body::-webkit-scrollbar {
+        display: block; /* Chrome, Safari, Opera*/
+    }
+}
+
 header{width: 100%; padding: 0 10%; background-color: #4580eb; position: absolute; display: flex; align-items: center; justify-content: space-between;}
 .homeBtn{padding: 15px 0; width: 30px; text-align: center; font-size: 20px;}
 .hBtnbox{display: inline-block; text-align: right; width: calc(100% - 30px);}
-.profile{font-family: 'Blinker', sans-serif; font-size: 24px; font-weight: 400; padding: 15px;}
 .sitemap{position: relative; height: 20px; width: 30px;}
 .sitemap span{position: absolute; width: 100%; height: 2px; background-color: #000; left: 0;}
 .sitemap span:first-child{top: 0;}
 .sitemap span:nth-child(2){top: calc(50% - 2px);}
 .sitemap span:last-child{bottom: 0;}
-main{width: 100%; min-width: 1920px; height: 100vh; min-height: 937px;}
+main{width: 100%;  height: 100%;}
 
 .contentWrap{width: 100%; height: 100%; padding: 150px 10%; background-color: #4580eb; display: flex;}
-.titleBox{width: 28%;}
-.titleBox .title{font-size: 80px; font-weight: 600; line-height: .8; margin-bottom: 20px; font-family: 'Blinker', sans-serif;}
-.titleBox .subBtn{font-size: 36px; display: inline-block; font-family: 'Blinker', sans-serif; margin-bottom: 5px; position: relative; z-index: 0;}
+.titleBox{width: 28%; position: relative;}
+.titleBox .title{font-size: 80px; font-weight: 600; line-height: .85; margin-bottom: 24px; font-family: 'Blinker', sans-serif;}
+.titleBox .subBtn{font-size: 36px; display: inline-block; font-family: 'Blinker', sans-serif; margin-bottom: 10px; position: relative; z-index: 0;}
 .titleBox .subBtn:before{content:''; position: absolute; bottom: 0; left: 0; width: 100%; height: 3px; background: #000; transition: .4s; z-index: -1;}
-.titleBox .subBtn:hover{color: #fff; transition: .4s;}
-.titleBox .subBtn:hover:before{height: 100%; transition: .4s;}
-.titleBox .activeBtn{color: #fff;}
-.titleBox .activeBtn:before{height: 100%;}
+.titleBox .subBtn:hover{/*color: #fff;*/ transition: .4s;}
+.titleBox .subBtn:hover:before{height: 100%; transition: .4s; background-color: #FFFF00;}
+.titleBox .activeBtn{/*color: #fff;*/}
+.titleBox .activeBtn:before{height: 100%; background-color: #FFFF00;}
+.titleBottom{position: absolute; bottom: -125px; left: -55px; width: 100%;}
+.profileBtn{width: 100%; height: 100%;}
+svg {height: 100%;}
+.rotateText{font-family: 'Blinker', sans-serif; font-size: 40px; font-weight: 600;}
+.rotateSmile{position: absolute; top: 100px; left: 100px; animation: rotate_image 6s linear infinite;}
+@keyframes rotate_image{
+    100% {transform: rotate(360deg);}
+}
 .contentBox{width: 75%; overflow: hidden; position: relative; }
+.contentNone{display: none;}
 .swiper-slide{width: 30%;}
 .imgBox{width: 100%; height: 50%; margin-bottom: 20px; overflow: hidden; background-color: bisque; transition: .4s;}
-.swiper-slide-active .imgBox{height: 60%; transition: .4s;}
+.swiper-slide-active .imgBox{height: 68%; transition: .4s;}
 .imgBox img{width: 100%;}
-.swiper-button-next, .swiper-button-prev{top: unset; bottom: 0; width: 50px; height: 50px;}
+.swiper-button-next, .swiper-button-prev{top: unset; bottom: 0; width: 50px; height: 50px; border: 2px solid #000; border-radius: 50px;}
 .swiper-button-next{right: 0;}
-.swiper-button-prev{left: 90%;}
-.swiper-button-next:after{content: ''; width: 25px; height: 25px; border-top: solid #000; border-right: 2px solid #000; transform: rotate(45deg);}
-.swiper-button-prev:after{content: ''; width: 25px; height: 25px; border-top: solid #000; border-left: 2px solid #000; transform: rotate(-45deg);}
-
+.swiper-button-prev{left: 88%;}
+.swiper-button-next:after{content: ''; position: absolute; width: 20px; height: 20px; border-top: 2px solid #000; border-right: 2px solid #000; transform: rotate(45deg); right: 15px;}
+.swiper-button-prev:after{content: ''; position: absolute; width: 20px; height: 20px; border-top: 2px solid #000; border-left: 2px solid #000; transform: rotate(-45deg); left: 15px;}
 .textBox p{font-family: 'Noto Sans KR', sans-serif;}
 .textBox .name{font-size: 20px; font-weight: bold; margin-bottom: 10px;}
 .textBox .describe{font-size: 16px; font-weight: 300; line-height: 1.4;}
@@ -49,3 +66,151 @@ main{width: 100%; min-width: 1920px; height: 100vh; min-height: 937px;}
 .iconBox img:last-child{margin-right: 0;}
 .textBox a{font-family: 'Blinker', sans-serif; padding: 10px; margin-top: 10px; font-size: 20px; border: 2px solid #000; transition: .4s;}
 .textBox a:hover{background-color: #000; color: #fff; transition: .4s;}
+
+.profileNone{display: none;}
+.profileBox {width: 75%; position: relative; overflow: hidden;}
+  .profileTop {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+  }
+  .profilecont {
+    padding: 0 20px 20px;
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .profilecont h2,
+  .profileBoxfull h2 {
+    font-size: 4em;
+    margin-bottom: 20px;
+  }
+  .profilecont p {
+    display: inline-block;
+    font-size: 24px;
+    font-family: "Noto Serif KR";
+  }
+  .profilephoto {
+    width: calc(20% + 5px);
+    padding-left: 0;
+    overflow: hidden;
+    position: relative;
+  }
+  .profilephoto img {
+    position: absolute;
+    top: -38px;
+  }
+  .profileName {
+    width: calc(40% - 2.5px);
+  }
+  .profileName h2 {
+    font-family: "Noto Serif KR";
+    font-weight: 600;
+  }
+  .profileContact {
+    width: calc(40% - 2.5px);
+    border-right: 0;
+  }
+  .profilecont .profilInvisible {
+    color: transparent;
+  }
+  .profileBottom {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+  }
+  .profilecontfull {
+    height: 50%;
+    display: flex;
+  }
+  .profilecontfull h2 {
+    width: 20%;
+    padding: 20px 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    margin-right: 5px;
+  }
+  .profilecontfull .profileContent {
+    width: 80%;
+    padding: 20px 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    margin-left: 5px;
+  }
+  .profilecontfull .profileSkill {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .profileSkill span {
+    width: 150px;
+    height: 150px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    padding: 55px 0;
+    color: #fff;
+    border: 10px solid;
+    box-sizing: border-box;
+    border-radius: 40px;
+    box-shadow: 0 0 15px rgb(0 0 0 / 30%);
+    /* font-family: "Noto sans serif"; */
+  }
+  .profileSkill .Photoshop {
+    border-color: #2fa3f7;
+    background-color: #082d47;
+    padding: 43px 0;
+  }
+  .profileSkill .Illustrator {
+    border-color: #f79500;
+    background-color: #e45b00;
+    padding: 43px 0;
+  }
+  .profileSkill .Indesign {
+    border-color: #f73163;
+    background-color: rgb(46, 8, 19);
+    padding: 43px 0;
+  }
+  .profileSkill .Xd {
+    border-color: #ff61f6;
+    background-color: rgb(177, 10, 60);
+  }
+  .profileSkill .html5 {
+    border-color: #dd4b25;
+    background-color: #e96228;
+  }
+  .profileSkill .css {
+    border-color: #006bc0;
+    background-color: #0096dc;
+  }
+  .profileSkill .jquery {
+    border-color: #0868ab;
+    background-color: #131b28;
+  }
+  .profileCareer {
+    padding-bottom: 0;
+  }
+  .profileContent > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .careerYear {
+    font-size: 2em;
+    width: 20%;
+  }
+  .careerJob {
+    width: 80%;
+    text-align: left;
+    font-family: "Noto Serif KR";
+    font-size: 24px;
+  }
+  .careerJob span {
+    margin-top: 10px;
+    font-family: "Noto Serif KR";
+    font-size: 16px;
+  }

@@ -16,7 +16,7 @@
             <i class="fa-solid fa-house"></i>
         </a>
         <div class="hBtnbox">
-            <a class="profile" href="javascript:void(0)">PROFILE</a>
+            <!-- <a class="profile" href="javascript:void(0)">PROFILE</a> -->
             <a class="sitemap" href="javascript:void(0)">
                 <span></span>
                 <span></span>
@@ -27,10 +27,31 @@
     <main>
         <div class="contentWrap">
             <div class="titleBox">
-                <p class="title">PORTFOLIO<br>2022</p>
-                <a class="subBtn pbBtn activeBtn" href="javascript:void(0)">PUBLISHING /</a><br>
-                <a class="subBtn uixBtn" href="javascript:void(0)">UIUX /</a><br>
-                <a class="subBtn edBtn" href="javascript:void(0)">EDITORIAL</a>
+                <div class="titleTop">
+                    <p class="title">PORTFOLIO<br>2022</p>
+                    <a class="subBtn pbBtn activeBtn" href="javascript:void(0)">PUBLISHING /</a><br>
+                    <a class="subBtn uixBtn" href="javascript:void(0)">UIUX /</a><br>
+                    <a class="subBtn edBtn" href="javascript:void(0)">EDITORIAL</a>
+                </div>
+                <div class="titleBottom">
+                    <a class="profileBtn" href="javascript:void(0)">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 600 600">
+                            <defs>
+                                <path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle_top">
+                                    <animateTransform attributeName="transform" begin="0s" dur="20s" type="rotate" from="0 250 250" to="360 250 250" repeatCount="indefinite" />
+                                </path>
+                                <path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle_bottom">
+                                    <animateTransform attributeName="transform" begin="0s" dur="20s" type="rotate" from="195 250 250" to="555 250 250" repeatCount="indefinite" />
+                                </path>
+                            </defs>
+                            <text class="rotateText" dy="70" textLength="1220">
+                                <textPath xlink:href="#textcircle_top">HI! LET ME INTRODUCE MY SELF.</textPath>
+                                <!-- <textPath xlink:href="#textcircle_bottom">Since ~ 1999</textPath> -->
+                            </text>
+                        </svg>
+                        <img class="rotateSmile" src="img/smile.png" alt="smile">
+                    </a>
+                </div>
             </div>
             <div class="contentBox">
                 <div class="swiper-wrapper">
@@ -106,6 +127,49 @@
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
             </div>
+            <div class="profileBox profileNone">
+                <div class="profileTop">
+                    <div class="profilecont profilephoto">
+                        <img src="img/profile.png">
+                    </div>
+                    <div class="profilecont profileName">
+                        <h2>金 藝 智</h2>
+                        <p class="nameKorean aaa">김예지  ·  Kim Yeji</p>
+                    </div>
+                    <div class="profilecont profileContact">
+                        <h2>Contact</h2>
+                        <p class="profileMail">woojin_966@naver.com</p>
+                        <!-- <p class="profilInvisible">invisible</p> -->
+                    </div>
+                </div>
+                <div class="profileBottom">
+                    <div class="profilecontfull profileSkill">
+                        <h2>Skills</h2>
+                        <div class="profileContent profileSkill">
+                            <span class="skillIcon Photoshop">PHOTO<br>SHOP</span>
+                            <span class="skillIcon Illustrator">ILLUST<br>RATOR</span>
+                            <span class="skillIcon Indesign">IN<br>DESIGN</span>
+                            <span class="skillIcon Xd">XD</span>
+                            <span class="skillIcon html5">HTML</span>
+                            <span class="skillIcon css">CSS</span>
+                            <span class="skillIcon jquery">JQEURY</span>
+                        </div>
+                    </div>
+                    <div class="profilecontfull profileCareer">
+                        <h2>Career</h2>
+                        <div class="profileContent">
+                            <div>
+                                <p class="careerYear">2014 ~ 2019</p>
+                                <p class="careerJob">편집디자이너<span> / 주품디자인 외 동종업계</span></p>
+                            </div>
+                            <div>
+                                <p class="careerYear">2020 ~ 2021</p>
+                                <p class="careerJob">Web/Uiux디자이너, 퍼블리셔<span> / HSM CLOUDIPIA</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -151,6 +215,31 @@
                     $('.activeBtn').removeClass('activeBtn');
                     $('.edBtn').addClass('activeBtn');
                 }       
+            });
+
+            $('.profileBtn').mouseover(function(){
+                var PROFILE = $(this);
+                var SMILE = PROFILE.children('img.rotateSmile');
+                SMILE.attr('src','img/smile_hover.png');
+            });
+            $('.profileBtn').mouseout(function(){
+                var PROFILE = $(this);
+                var SMILE = PROFILE.children('img.rotateSmile');
+                SMILE.attr('src','img/smile.png');
+            });
+            $('.profileBtn').on('click', function(){
+                var PORFILE_ACT = $(this);
+                if(PORFILE_ACT.hasClass('on')){
+                    PORFILE_ACT.removeClass('on');
+                    $('.pbBtn').addClass('activeBtn');
+                    $('.contentBox').removeClass('contentNone');
+                    $('.profileBox').addClass('profileNone');
+                }else{
+                    PORFILE_ACT.addClass('on');
+                    $('.activeBtn').removeClass('activeBtn');
+                    $('.contentBox').addClass('contentNone');
+                    $('.profileBox').removeClass('profileNone');
+                }
             });
         });
       </script>
