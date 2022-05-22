@@ -9,15 +9,6 @@ body {
 body::-webkit-scrollbar {
     display: none; /* Chrome, Safari, Opera*/
 }
-@media (min-width: 1920px){
-    body {
-        -ms-overflow-style: scrollbar; /* IE and Edge */
-        scrollbar-width: 5px; /* Firefox */
-    }
-    body::-webkit-scrollbar {
-        display: block; /* Chrome, Safari, Opera*/
-    }
-}
 
 header{width: 100%; padding: 0 10%; background-color: #4580eb; position: absolute; display: flex; align-items: center; justify-content: space-between;}
 .homeBtn{padding: 15px 0; width: 30px; text-align: center; font-size: 20px;}
@@ -52,9 +43,19 @@ svg {height: 100%;}
 .contentBox{width: 75%; overflow: hidden; position: relative; }
 .contentNone{display: none;}
 .swiper-slide{width: 30%;}
-.imgBox{width: 100%; height: 50%; margin-bottom: 20px; overflow: hidden; background-color: bisque; transition: .4s;}
-.swiper-slide-active .imgBox{height: 68%; transition: .4s;}
-.imgBox img{width: 100%;}
+.imgBox{width: 100%; height: 50%; margin-bottom: 20px; overflow: hidden; transition: .4s; position: relative; overflow: hidden; box-shadow: rgba(0, 0, 0, 0.2);}
+.swiper-slide-active .imgBox{height: 68%; transition: .4s; border: 8px solid #ffff00;}
+.imgBox img{height: 100%; position: relative; right: 100%;}
+.nbbImg img{right: 36%;}
+.swiper-slide-active .nbbImg img{right: 68%;}
+.knbImg img{right: 40%;}
+.imgBox:hover img{transform:scale(1.5); transition: .4s;}
+.imgBox:hover:before{position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.2); color: #fff; font-size: 20px; font-weight: 600; font-family: 'Noto Sans KR', sans-serif; z-index: 1; text-align: center; padding: 85% 0 0 0; box-sizing: border-box;  transition: .4s;}
+.swiper-slide-active .imgBox:hover:before{padding: 120% 0 0 0;}
+.nscsImg:hover:before{content: '국가과학난제도전/Web Publishing';}
+.nbbImg:hover:before{content: '노브랜드버거/UIUX Design';}
+.knbImg:hover:before{content: '국립발레단/UIUX Design';}
+.edImg:hover:before{content: '편집디자인/Portfolio';}
 .swiper-button-next, .swiper-button-prev{top: unset; bottom: 0; width: 50px; height: 50px; border: 2px solid #000; border-radius: 50px;}
 .swiper-button-next{right: 0;}
 .swiper-button-prev{left: 88%;}
@@ -65,7 +66,7 @@ svg {height: 100%;}
 .textBox .describe{font-size: 16px; font-weight: 300; line-height: 1.4;}
 .textBox .describe b{font-weight: bold;}
 .iconBox{margin: 10px 0;}
-.iconBox img{display: inline-block; width: 30px; height: 30px; margin-right: 5px; background-color: #f5f5f5;}
+.iconBox img{display: inline-block; width: 30px; height: 30px; margin-right: 5px;}
 .iconBox img:last-child{margin-right: 0;}
 .textBox a{font-family: 'Blinker', sans-serif; padding: 10px; margin-top: 10px; font-size: 20px; border: 2px solid #000; transition: .4s;}
 .textBox a:hover{background-color: #000; color: #fff; transition: .4s;}

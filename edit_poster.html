@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/screen/editorial.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>金藝智 PORTFOLIO 2022</title>
+</head>
+<body>
+  <header>
+    <div class="subTitlebox">
+      <a href="edit_poster.html" class="subHomebtn">
+        <h1>EDITORIAL </h1>
+        <span>: 편집디자인</span>
+      </a>
+      <ul Class="subMenu">
+        <li Class="subMenu_list">
+          <a href="index.html" class="subMenubtn edit_all">HOME</a>
+        </li>
+        <span class="listDash">/</span>
+        <li Class="subMenu_list">
+          <a href="edit_poster.html" class="subMenubtn edit_poster subMenu_active">포스터</a>
+        </li>
+        <span class="listDash">/</span>
+        <li Class="subMenu_list">
+            <a href="edit_leaflet.html" class="subMenubtn edit_leaflet">리플렛</a>
+        </li>
+        <span class="listDash">/</span>
+        <li Class="subMenu_list">
+            <a href="edit_8p.html" class="subMenubtn edit_8p">8p이상</a>
+        </li>
+      </ul>
+      <span class="subTitle_right">2016 - 2019</span>
+    </div>
+  </header>
+  <main>
+    <div class="subContentbox">
+      <div class="swiper swiper-container editSwiper">
+        <div class="swiper-wrapper editSwiper_wrapper">
+          <div class="swiper-slide editSwiper_slide">
+            <img src="img/의왕시청_2018UCC공모전_포스터-01.jpg" alt="의왕시청_ucc1_포스터" style="width: 29%;">
+            <div class="editDescription">
+              <p class="editName">UCC 공모전 포스터</p>
+              <span class="editYear">의왕시청 / 2018</span>
+              <span class="dot"> · </span>
+              <span class="editSize">297 x 420</span>
+            </div>
+          </div>
+          <div class="swiper-slide editSwiper_slide">
+            <img src="img/의왕시청_2019UCC공모전_포스터-01.jpg" alt="의왕시청_ucc2_포스터" style="width: 29%;">
+            <div class="editDescription">
+              <p class="editName">UCC 공모전 포스터</p>
+              <span class="editYear">의왕시청 / 2019</span>
+              <span class="dot"> · </span>
+              <span class="editSize">297 x 420</span>
+            </div>
+          </div>
+          <div class="swiper-slide editSwiper_slide">
+            <img src="img/군포청소년_로봇대회_포스터-01.jpg" alt="군포청소년_로봇대회_포스터" style="width: 29%;">
+            <div class="editDescription">
+              <p class="editName">청소년 로봇대회 포스터</p>
+              <span class="editYear">군포청소년수련관 / 2018</span>
+              <span class="dot"> · </span>
+              <span class="editSize">297 x 420</span>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next editSwiper_next"></div>
+        <div class="swiper-button-prev editSwiper_prev"></div>
+      </div>
+    </div>
+    <div class="editBlobbox">
+      <span class="blob blob1"></span>
+      <span class="blob blob2"></span>
+      <span class="blob blob3"></span>
+      <span class="blob blob4"></span>
+      <span class="blob blob5"></span>
+      <span class="blob blob6"></span>
+      <span class="blob blob7"></span>
+      <span class="blob blob8"></span>
+      <span class="blob blob9"></span>
+      <span class="blob blob10"></span>
+      <span class="blob blob11"></span>
+  </div>
+  </main>
+  <footer></footer>
+  <script>
+    $(document).ready(function(){
+      var swiper = new Swiper(".editSwiper", {
+        direction: 'horizontal',		// 가로 슬라이드
+        slidesPerView: 1,			// 한 영역에 보이는 슬라이드 수
+        spaceBetween: 16,
+        debugger: true,
+        loop: true,
+        navigation: {
+          nextEl: ".editSwiper_next",
+          prevEl: ".editSwiper_prev",
+        },
+        observer: true,	// 추가
+        observeParents: true,
+      });
+    });
+  </script>
+</body>
+</html>
