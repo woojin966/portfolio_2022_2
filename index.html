@@ -72,6 +72,22 @@
                             <a class="link" href="https://www.nscn.or.kr/" target="_blank">Go to Site</a>
                         </div>
                     </div>
+                    <div class="swiper-slide">
+                        <a class="imgBox minmiImg" href="https://woojin966.github.io/__brand/" target="_blank">
+                            <img class="tumbnailImg" src="img/" alt="thumnail">
+                        </a>
+                        <div class="textBox">
+                            <p class="name">미앤미의원 통합홈페이지</p>
+                            <p class="describe describe1"><b>포지션 / </b>publishing, uiux design</p>
+                            <p class="describe describe2"><b>제작기간 / </b>2022. 07 ~ 08</p>
+                            <div class="iconBox">
+                                <img class="toolIcon html" src="img/skillIcon2.png" alt="toolIcon">
+                                <img class="toolIcon css" src="img/skillIcon3.png" alt="toolIcon">
+                                <img class="toolIcon jquery" src="img/skillIcon4.png" alt="toolIcon">
+                            </div>
+                            <a class="link" href="https://woojin966.github.io/__brand/" target="_blank">Go to Site</a>
+                        </div>
+                    </div>
                     <div class="swiper-slide uixSlide">
                         <a class="imgBox nbbImg" href="https://xd.adobe.com/view/64098406-8c3a-4753-ad64-b0f48f80cd00-315a/?fullscreen&hints=off" target="_blank">
                             <img class="tumbnailImg" src="img/nbbTumb.jpg" alt="thumnail">
@@ -182,6 +198,7 @@
                             </dt>
                             <dd>
                                 <a class="siteSub nscn" href="https://www.nscn.or.kr/" target="_blank">국가과학난제도전</a>
+                                <a class="siteSub minmi" href="https://woojin966.github.io/__brand/" target="_blank">미앤미의원 통합홈페이지</a>
                             </dd>
                         </dl>
                     </li>
@@ -245,7 +262,7 @@
                 }
             });
             $('.uixBtn').click(function(){
-                swiper.slideTo( 1 , 2000 );
+                swiper.slideTo( 2 , 2000 );
                 $('.activeBtn').removeClass('activeBtn');
                 $('.uixBtn').addClass('activeBtn');
                 if($('.profileBtn').hasClass('on')){
@@ -255,7 +272,7 @@
                 }
             });
             $('.edBtn').click(function(){
-                swiper.slideTo( 3 , 2000 );
+                swiper.slideTo( 4 , 2000 );
                 $('.activeBtn').removeClass('activeBtn');
                 $('.edBtn').addClass('activeBtn');
                 if($('.profileBtn').hasClass('on')){
@@ -269,10 +286,10 @@
                 if(this.activeIndex === 0){
                     $('.activeBtn').removeClass('activeBtn');
                     $('.pbBtn').addClass('activeBtn');
-                }else if(this.activeIndex === 1){
+                }else if(this.activeIndex === 2){
                     $('.activeBtn').removeClass('activeBtn');
                     $('.uixBtn').addClass('activeBtn');
-                }else if(this.activeIndex === 3){
+                }else if(this.activeIndex === 4){
                     $('.activeBtn').removeClass('activeBtn');
                     $('.edBtn').addClass('activeBtn');
                 }       
@@ -308,7 +325,7 @@
                         $('.contentBox').removeClass('contentNone');
                         $('.profileBox').addClass('profileNone');
                         $('.pbBtn').addClass('activeBtn');
-                        swiper.slideTo( 0 , 2000 );
+                        swiper.slideChange( 0 , 2000 );
                     });
                 }
             });

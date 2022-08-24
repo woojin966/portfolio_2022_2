@@ -52,6 +52,7 @@ svg {height: 100%;}
 .imgBox:hover img{transform:scale(1.5); transition: .4s;}
 .imgBox:hover:before{position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.2); color: #fff; font-size: 20px; font-weight: 600; font-family: 'Noto Sans KR', sans-serif; z-index: 1; text-align: center; padding: 85% 0 0 0; box-sizing: border-box;  transition: .4s;}
 .swiper-slide-active .imgBox:hover:before{padding: 120% 0 0 0;}
+.minmiImg:hover:before{content: '미앤미의원통합홈/Web Publishing';}
 .nscsImg:hover:before{content: '국가과학난제도전/Web Publishing';}
 .nbbImg:hover:before{content: '노브랜드버거/UIUX Design';}
 .knbImg:hover:before{content: '국립발레단/UIUX Design';}
@@ -104,14 +105,14 @@ svg {height: 100%;}
 .careerYear{font-size: 32px; font-weight: 600; margin-bottom: 10px; font-family: 'Noto Sans KR', sans-serif;}
 .careerJob{font-size: 20px; font-family: 'Noto Sans KR', sans-serif;}
 
-.sitemapBox{display: none; position: absolute; top: 15%; left: 300px; padding: 150px 300px; background-color: #fff; z-index: 10; width: 1300px; height: 650px; box-shadow: 0 0 15px rgb(0 0 0 / 30%);}
+.sitemapBox{display: none; position: absolute; top: 15%; left: 300px; padding: 150px 290px; background-color: #fff; z-index: 10; width: 1300px; height: 650px; box-shadow: 0 0 15px rgb(0 0 0 / 30%);}
 .sitemapBlk{display: block;}
 .sitemapBox li{margin-bottom: 40px;}
 .sitemapBox li:nth-child(3){margin-bottom: 80px;}
 .sitemapBox li dl{display: flex; align-items: center;}
-.sitemapBox dt{width: 50%;}
+.sitemapBox dt{width: 35%;}
 .sitemapBox dt a{font-size: 36px; font-family: 'Blinker', sans-serif; font-weight: 600;}
-.sitemapBox dd{width: 50%;}
+.sitemapBox dd{width: 65%;}
 .sitemapBox dd a{position:relative; font-size: 20px; font-family: 'Noto Sans KR', sans-serif; margin-left: 20px;}
 .sitemapBox dd a:before{content: ''; position: absolute; left: 0; bottom: 0; width: 0; height: 5px; background-color: #FFFF00; transition: .4s; z-index: -1;}
 .sitemapBox dd a:hover:before{width: 100%; transition: .4s;}
