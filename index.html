@@ -133,7 +133,7 @@
                                 <img class="toolIcon illustrator" src="img/skillIcon6.png" alt="toolIcon">
                                 <img class="toolIcon photoshop" src="img/skillIcon7.png" alt="toolIcon">
                             </div>
-                            <a class="link" href="editorial.html" target="_blank">View Portfolio</a>
+                            <a class="link edlink" href="editorial.html" target="_blank">View<br> Portfolio</a>
                         </div>
                     </div>
                     <div class="swiper-slide invisibleSlide"></div>
@@ -141,6 +141,25 @@
                 </div>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
+            </div>
+            <div class="M_profileBtn_Box">
+                <a class="profileBtn" href="javascript:void(0)">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 600 600">
+                        <defs>
+                            <path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle_top">
+                                <animateTransform attributeName="transform" begin="0s" dur="20s" type="rotate" from="0 250 250" to="360 250 250" repeatCount="indefinite" />
+                            </path>
+                            <path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle_bottom">
+                                <animateTransform attributeName="transform" begin="0s" dur="20s" type="rotate" from="195 250 250" to="555 250 250" repeatCount="indefinite" />
+                            </path>
+                        </defs>
+                        <text class="rotateText" dy="70" textLength="1220">
+                            <textPath xlink:href="#textcircle_top">HI! LET ME INTRODUCE MY SELF.</textPath>
+                            <!-- <textPath xlink:href="#textcircle_bottom">Since ~ 1999</textPath> -->
+                        </text>
+                    </svg>
+                    <img class="rotateSmile" src="img/smile.png" alt="smile">
+                </a>
             </div>
             <div class="profileBox profileNone">
                 <div class="profileTop">
@@ -359,6 +378,25 @@
                     $('.contentBox').addClass('contentNone');
                 }
             });
+
+            var D_WIDTH = $(window).width();
+            if (D_WIDTH >= 360 && D_WIDTH <= 1199) {
+                $('.imgBox').height(D_WIDTH - 34 + 'px');
+                // $('.contentBox').height(D_WIDTH - 34 + 30 + 116 + 'px');
+                //(D_WIDTH - 34 + 30 + 116) * 2 + 'px'
+
+            //     var swiper = new Swiper(".contentBox", {
+            //     slidesPerView: "auto",
+            //     direction: "vertical",
+            //     spaceBetween: 20,
+            //     freeMode: true,
+            //     grabCursor: true,
+            //     navigation: {
+            //     nextEl: ".swiper-button-next",
+            //     prevEl: ".swiper-button-prev",
+            //     },
+            // });
+            }
         });
       </script>
 </body>
