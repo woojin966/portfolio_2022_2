@@ -105,6 +105,7 @@ svg {height: 100%;}
 .designBox span:nth-child(even){margin-right: 0;}
 .designBox span:nth-child(3), .designBox span:nth-child(4){margin-bottom: 0;}
 .profileCareer div:first-child{margin-bottom: 20px;}
+.profileCareer > div br{display: none}
 .careerYear{font-size: 32px; font-weight: 600; margin-bottom: 10px; font-family: 'Noto Sans KR', sans-serif;}
 .careerJob{font-size: 20px; font-family: 'Noto Sans KR', sans-serif;}
 
@@ -148,9 +149,47 @@ svg {height: 100%;}
     .swiper-button-prev{left: 73%;}
     .swiper-button-prev:after, .swiper-button-next:after{width: 12px; height: 12px;}
 
+    .profileBox{margin-top: 50px; width: 100%;}
+    .profileTop{flex-wrap: wrap; justify-content: space-between;}
+    .profilecont{padding: 20px 0; margin-bottom: 0; width: 100%; border-right: 0; justify-content: space-between; align-items: center; flex-direction: row;}
+    .profilephoto{border-top: 1px solid rgba(0, 0, 0, 0.2); border-bottom: 1px solid rgba(0, 0, 0, 0.2);}
+    .profileName{border-bottom: 1px solid rgba(0, 0, 0, 0.2);}
+    .profileName h2, .profileContact h2{font-size: 24px;}
+    .profileName p, .profileContact p{font-size: 16px; margin-top: 0;}
+    .profilecontfull{padding: 20px 0; margin-bottom: 0; flex-direction: column;}
+    .profileSkill{width: 100%; flex-wrap: wrap;}
+    .pbBox{display: flex; margin-bottom: 10px; justify-content: space-between;}
+    .profilecontfull h2{font-size: 24px; margin-bottom: 10px; width: 100%;}
+    .pbBox{width: 100%; display: flex; margin-bottom: 10px; flex-direction: row;}
+    .pbBox i{font-size: 70px; margin-right: 10px;}
+    .pbBox i.fa-js-square{margin-right: 0;}
+    .designBox{width: 100%; display: flex; flex-wrap: wrap; justify-content: space-between;}
+    .designBox span{border: 2px solid #000;  font-size: 16px; padding: 10px 0; margin-bottom: 0;}
+    .designBox span.xd{width: 18%;}
+    .designBox span.il{width: 25%; margin-right: 10px;}
+    .designBox span.ps{width: 50%; margin-right: 0;}
+    .designBox span.id{display: none;}
+    .profileCareer > div{display: flex; justify-content: space-between; margin-bottom: 20px; width: 100%;}
+    .profileCareer div:first-child{margin-bottom: 10px;}
+    .profileCareer div:nth-child(2){margin-bottom: 0;}
+    .pcfBox{width: 100%;}
+    .careerYear{font-size: 20px;}
+    .careerJob{width: 50%; font-size: 16px; letter-spacing: -1px; line-height: 1.4;}
+    .profileCareer > div br{display: block;}
+
     .titleBottom{position: absolute; display: none;}
     .M_profileBtn_Box{position: relative; left: calc((100% - 300px) / 2); display: block; width: 300px; height: 250px; text-align: center;}
     .profileBtn{overflow: hidden;}
     svg{height: 150%; padding-top: 20px; position: relative; top: -50px;}
     .rotateSmile{left: 82px; top: 50px;}
+
+    .sitemapBox{top: 10%; left: 17px; padding: 50px 0; width: calc(100% - 34px); height: 72vh;}
+    .sitemapBox li{margin-bottom: 30px; text-align: center;}
+    .sitemapBox li:nth-child(3){margin-bottom: 30px;}
+    .sitemapBox li dl{flex-direction: column;}
+    .sitemapBox dt{width: 100%; margin-bottom: 20px;}
+    .sitemapBox dt a{font-size: 24px;}
+    .sitemapBox dd a{font-size: 16px; margin-bottom: 10px; margin-left: 0; line-height: 1.2;}
+    .sitemapBox dd a.nbb{margin-right: 10px;}
+    .sitemapBg{height: 100%; z-index: 5;}
 }
