@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/common.css">
-    <script src="https://kit.fontawesome.com/9f52183145.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/c98d7cf001.js" crossorigin="anonymous"></script>
     <title>porifolio 2022</title>
 </head>
 <body>
@@ -88,6 +88,22 @@
                             <a class="link" href="https://woojin966.github.io/__brand/" target="_blank">Go to Site</a>
                         </div>
                     </div>
+                    <div class="swiper-slide">
+                        <a class="imgBox knbImg" href="https://xd.adobe.com/view/804c4d3c-8a23-4774-bec5-934128a09718-d51f/?fullscreen&hints=off" target="_blank">
+                            <img class="tumbnailImg" src="img/knbTumb.jpg" alt="thumnail">
+                        </a>
+                        <div class="textBox">
+                            <p class="name">국립발레단</p>
+                            <p class="describe describe1">웹사이트 리디자인</p>
+                            <p class="describe describe2">개인작업</p>
+                            <div class="iconBox">
+                                <img class="toolIcon html" src="img/skillIcon2.png" alt="toolIcon">
+                                <img class="toolIcon css" src="img/skillIcon3.png" alt="toolIcon">
+                                <img class="toolIcon jquery" src="img/skillIcon4.png" alt="toolIcon">
+                            </div>
+                            <a class="link knblink" href="https://woojin966.github.io/knb-redesign/" target="_blank">Go to Site</a>
+                        </div>
+                    </div>
                     <div class="swiper-slide uixSlide">
                         <a class="imgBox nbbImg" href="https://xd.adobe.com/view/64098406-8c3a-4753-ad64-b0f48f80cd00-315a/?fullscreen&hints=off" target="_blank">
                             <img class="tumbnailImg" src="img/nbbTumb.jpg" alt="thumnail">
@@ -102,22 +118,6 @@
                                 <img class="toolIcon photoshop" src="img/skillIcon7.png" alt="toolIcon">
                             </div>
                             <a class="link nbblink" href="https://xd.adobe.com/view/64098406-8c3a-4753-ad64-b0f48f80cd00-315a/?fullscreen&hints=off" target="_blank">Prototype</a>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <a class="imgBox knbImg" href="https://xd.adobe.com/view/804c4d3c-8a23-4774-bec5-934128a09718-d51f/?fullscreen&hints=off" target="_blank">
-                            <img class="tumbnailImg" src="img/knbTumb.jpg" alt="thumnail">
-                        </a>
-                        <div class="textBox">
-                            <p class="name">국립발레단</p>
-                            <p class="describe describe1">웹사이트 리디자인</p>
-                            <p class="describe describe2">개인작업</p>
-                            <div class="iconBox">
-                                <img class="toolIcon xd" src="img/skillIcon5.png" alt="toolIcon">
-                                <img class="toolIcon illustrator" src="img/skillIcon6.png" alt="toolIcon">
-                                <img class="toolIcon photoshop" src="img/skillIcon7.png" alt="toolIcon">
-                            </div>
-                            <a class="link knblink" href="https://xd.adobe.com/view/804c4d3c-8a23-4774-bec5-934128a09718-d51f/?fullscreen&hints=off" target="_blank">Prototype</a>
                         </div>
                     </div>
                     <div class="swiper-slide edSlide">
@@ -145,7 +145,6 @@
             <div class="profileBox profileNone">
                 <div class="profileTop">
                     <div class="profilecont profilephoto">
-                        
                     </div>
                     <div class="profilecont profileName">
                         <h2>金 藝 智</h2>
@@ -281,7 +280,7 @@
                 }
             });
             $('.uixBtn').click(function(){
-                swiper.slideTo( 2 , 2000 );
+                swiper.slideTo( 3 , 2000 );
                 $('.activeBtn').removeClass('activeBtn');
                 $('.uixBtn').addClass('activeBtn');
                 if($('.profileBtn').hasClass('on')){
@@ -305,7 +304,7 @@
                 if(this.activeIndex === 0){
                     $('.activeBtn').removeClass('activeBtn');
                     $('.pbBtn').addClass('activeBtn');
-                }else if(this.activeIndex === 2){
+                }else if(this.activeIndex === 3){
                     $('.activeBtn').removeClass('activeBtn');
                     $('.uixBtn').addClass('activeBtn');
                 }else if(this.activeIndex === 4){

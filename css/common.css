@@ -125,7 +125,7 @@ svg {height: 100%;}
 
 @media (min-width: 360px) and (max-width: 1199px) {
     html, body{width: 100%; min-width: unset; height: auto; min-height: 100vh; overflow-x: hidden;}
-    header{padding: 0 17px;}
+    header{padding: 10px 17px;}
     .contentWrap{flex-direction: column; padding: 100px 17px 20px;}
     .titleBox{width: 100%;}
     .titleTop{display: flex; flex-wrap: wrap; justify-content: space-between;}
@@ -152,7 +152,7 @@ svg {height: 100%;}
     .profileBox{margin-top: 50px; width: 100%;}
     .profileTop{flex-wrap: wrap; justify-content: space-between;}
     .profilecont{padding: 20px 0; margin-bottom: 0; width: 100%; border-right: 0; justify-content: space-between; align-items: center; flex-direction: row;}
-    .profilephoto{border-top: 1px solid rgba(0, 0, 0, 0.2); border-bottom: 1px solid rgba(0, 0, 0, 0.2);}
+    .profilephoto{border-top: 1px solid rgba(0, 0, 0, 0.2); border-bottom: 1px solid rgba(0, 0, 0, 0.2); display: none;}
     .profileName{border-bottom: 1px solid rgba(0, 0, 0, 0.2);}
     .profileName h2, .profileContact h2{font-size: 24px;}
     .profileName p, .profileContact p{font-size: 16px; margin-top: 0;}
