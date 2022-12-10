@@ -46,13 +46,13 @@ svg {height: 100%;}
 .swiper-slide{width: 30%;}
 .invisibleSlide{display: block;}
 .imgBox{width: 100%; height: 50%; margin-bottom: 20px; overflow: hidden; transition: .4s; position: relative; overflow: hidden; box-shadow: rgba(0, 0, 0, 0.2);}
-.swiper-slide-active .imgBox{height: 68%; transition: .4s; border: 8px solid #ffff00;}
+.swiper-slide-active .imgBox{height: 58%; transition: .4s; border: 8px solid #ffff00;}
 .imgBox img{height: 100%; position: relative;}
 .imgBox.nscsImg img{right: 100%;}
-.swiper-slide-active .minmiImg img{left: -16%;}
+.swiper-slide-active .minmiImg img{left: -5%;}
 .swiper-slide-active .edImg img{position: absolute; right: -20px;}
 .nbbImg img{right: 36%;}
-.swiper-slide-active .nbbImg img{right: 68%;}
+.swiper-slide-active .nbbImg img{right: 50%;}
 .knbImg img{right: 40%;}
 .imgBox:hover img{transform:scale(1.5); transition: .4s;}
 .imgBox:hover:before{position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.2); color: #fff; font-size: 20px; font-weight: 600; font-family: 'Noto Sans KR', sans-serif; z-index: 1; text-align: center; padding: 85% 0 0 0; box-sizing: border-box;  transition: .4s;}
@@ -60,7 +60,7 @@ svg {height: 100%;}
 .minmiImg:hover:before{content: '미앤미의원통합홈/Web Publishing';}
 .nscsImg:hover:before{content: '국가과학난제도전/Web Publishing';}
 .nbbImg:hover:before{content: '노브랜드버거/UIUX Design';}
-.knbImg:hover:before{content: '국립발레단/UIUX Design';}
+.knbImg:hover:before{content: '국립발레단/Web Publishing';}
 .edImg:hover:before{content: '편집디자인/Portfolio';}
 .swiper-button-next, .swiper-button-prev{top: unset; bottom: 0; width: 50px; height: 50px; border: 2px solid #000; border-radius: 50px;}
 .swiper-button-next{right: 0;}
@@ -69,8 +69,14 @@ svg {height: 100%;}
 .swiper-button-prev:after{content: ''; position: absolute; width: 20px; height: 20px; border-top: 2px solid #000; border-left: 2px solid #000; transform: rotate(-45deg); left: 15px;}
 .textBox p{font-family: 'Noto Sans KR', sans-serif;}
 .textBox .name{font-size: 20px; font-weight: bold; margin-bottom: 10px;}
-.textBox .describe{font-size: 16px; font-weight: 300; line-height: 1.4;}
+.textBox .describe{font-size: 16px; font-weight: 300; line-height: 1.4; margin-bottom: 5px;}
 .textBox .describe b{font-weight: bold;}
+.contributionBox{display: flex;}
+.cellBox{margin-left: 5px;}
+.cellBox div{margin-bottom: 5px;}
+/* .cellBox div:last-child{margin-bottom: 0;} */
+.cellBox div .cell {width: 10px; height: 10px; background-color: rgba(255,255,255,.2); border: 1px solid #fff; border-radius: 2px; display: inline-block;}
+.cellBox div .colorCell{background-color: #fff;}
 .iconBox{margin: 10px 0;}
 .iconBox img{display: inline-block; width: 30px; height: 30px; margin-right: 5px;}
 .iconBox img:last-child{margin-right: 0;}
@@ -152,6 +158,8 @@ svg {height: 100%;}
     .textBox a{position: absolute; top: 0; right: 0; margin-top: 0; padding: 45px 0; width: 90px; line-height: 1.4; text-align: center; font-size: 16px;}
     .textBox .edlink{padding: 35px 0;}
     .textBox a br{display: block;}
+    .contributionBox{display: block;}
+    .cellBox{margin-left: 0;}
     .swiper-button-next, .swiper-button-prev{width: 40px; height: 40px; border: 1px solid #000;}
     .swiper-button-prev{left: 73%;}
     .swiper-button-prev:after, .swiper-button-next:after{width: 12px; height: 12px;}
