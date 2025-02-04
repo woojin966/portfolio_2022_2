@@ -36,14 +36,12 @@ body {
     "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
     sans-serif, "sandol neo M", "sandol neo B", "SB Eogro M";
   width: 100%;
-  min-width: 1800px;
   height: 100vh;
   min-height: 937px;
   overflow: hidden;
 }
 header {
   width: 100%;
-  min-width: 1320px;
   padding: 20px 5%;
   display: flex;
   justify-content: space-between;
