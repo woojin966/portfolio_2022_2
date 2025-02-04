@@ -47,20 +47,18 @@ svg {height: 100%;}
 .invisibleSlide{display: block;}
 .imgBox{width: 100%; height: 50% !important; margin-bottom: 20px; overflow: hidden; transition: .4s; position: relative; overflow: hidden; box-shadow: rgba(0, 0, 0, 0.2);}
 .swiper-slide-active .imgBox{height: 57% !important; transition: .4s; border: 8px solid #ffff00;}
-.imgBox img{height: 100%; position: relative;}
-.imgBox.nscsImg img{right: 100%;}
-.swiper-slide-active .minmiImg img{left: -5%;}
-.swiper-slide-active .edImg img{position: absolute; right: -20px;}
-.nbbImg img{right: 36%;}
-.swiper-slide-active .nbbImg img{right: 50%;}
-.knbImg img{right: 40%;}
-.imgBox:hover img{transform:scale(1.5); transition: .4s;}
+.imgBox img{height: 100%; position: relative; object-fit: cover; width: 100%;}
+.imgBox:hover img{transform:scale(1.5); transition: .4s; }
 .imgBox:before{display: none;}
-.imgBox:hover:before{position: absolute; top: 0; left: 0; width: 100%; display: block; height: 100%; background-color: rgba(0, 0, 0, 0.2); color: #fff; font-size: 20px; font-weight: 600; font-family: 'Noto Sans KR', sans-serif; z-index: 1; text-align: center; padding: 85% 0 0 0; box-sizing: border-box;  transition: .4s;}
+.imgBox:hover:before{position: absolute; top: 0; left: 0; padding: 0 20px; width: 100%; display: block; height: 100%; background-color: rgba(0, 0, 0, 0.2); color: #fff; font-size: 20px; font-weight: 600; font-family: 'Noto Sans KR', sans-serif; z-index: 1; text-align: center; padding: 85% 0 0 0; box-sizing: border-box;  transition: .4s;}
 .swiper-slide-active .imgBox:hover:before{padding: 100% 0 0 0;}
 .rideusImg1:before{content:'라이더스통합홈/Web Publishing'}
-.rideusImg1{position: relative;}
-.rideusImg1 img{position: absolute; right: 0;}
+.rideusImg1, .rideusImg3{position: relative;}
+.rideusImg1 img, .rideusImg3 img{position: absolute; right: 0;}
+.rideusImg2:before{content: '라이더스셔틀예약-월드오브커피/Web Publishing';}
+.rideusImg3:before{content: '라이더스셔틀예약-2024세계탁구대회/Web Publishing';}
+.rideusImg4:before{content: '라이더스 제휴문의/Web Publishing';}
+.friezeImg:before{content: '2023 frieze 의전 예약사이트/Web Publishing';}
 .minmiImg:hover:before{content: '미앤미의원통합홈/Web Publishing';}
 .nscsImg:hover:before{content: '국가과학난제도전/Web Publishing';}
 .nbbImg:hover:before{content: '노브랜드버거/UIUX Design';}
@@ -117,7 +115,8 @@ svg {height: 100%;}
 .designBox span{display: inline-block; margin-right: 10px; margin-bottom: 10px; text-align: center; width: 165px; border: 3px solid #000; border-radius: 55px; font-size: 20px; padding: 12px 0; font-weight: 600; font-family: 'Noto Sans KR', sans-serif;}
 .designBox span:nth-child(even){margin-right: 0;}
 .designBox span:nth-child(3), .designBox span:nth-child(4){margin-bottom: 0;}
-.profileCareer div:first-child{margin-bottom: 20px;}
+.profileCareer div{margin-bottom: 12px;}
+.profileCareer div:last-child{margin-bottom: 0;}
 .profileCareer > div br{display: none}
 .careerYear{font-size: 32px; font-weight: 600; margin-bottom: 10px; font-family: 'Noto Sans KR', sans-serif;}
 .careerJob{font-size: 20px; font-family: 'Noto Sans KR', sans-serif;}
