@@ -16,7 +16,7 @@
 .title_box .subBtn:hover:before{height: 100%; transition: .4s; background-color: #FFFF00;}
 .title_box .subBtn.active:before{height: 100%; background-color: #FFFF00;}
 
-.content_wrap{position: relative; display: flex; flex-wrap: wrap; gap: 32px; justify-content: space-between;}
+.content_wrap{position: relative; display: flex; flex-wrap: wrap; gap: 32px;}
 .content_container{width: calc(25% - 24px);}
 .img_box{width: 100%; margin-bottom: 20px; overflow: hidden; transition: .4s; position: relative; overflow: hidden; box-shadow: rgba(0, 0, 0, 0.2);}
 .img_box{transition: .4s; border: 8px solid #ffff00;}
@@ -24,9 +24,11 @@
 .img_box.rideusImg1 img{object-position: right;}
 .img_box::before, .img_box::after{display: none;}
 .content_container:hover .img_box::before{position: absolute; bottom: 12px; left: 0; width: 100%; display: block; color: #fff; font-size: 20px; font-weight: 600; font-family: 'Noto Sans KR', sans-serif; z-index: 2; text-align: center; box-sizing: border-box;  transition: .4s;}
-.content_container:hover .img_box::after{position: absolute; content: ''; top: 0; left: 0; width: 100%; display: block; height: 100%; background-color: rgba(0, 0, 0, 0.2); z-index: 1;}
+.content_container:hover .img_box::after{position: absolute; content: ''; top: 0; left: 0; width: 100%; display: block; height: 100%; background-color: rgba(0, 0, 0, 0.4); z-index: 1;}
 .content_container:hover .img_box img{transform:scale(1.5); transition: .4s; }
 
+.fiveandplus:before{content: 'Publishing & Design';}
+.groundk:before{content: 'Publishing';}
 .rideusImg1:before{content:'Publishing'}
 .rideusImg4:before{content: 'Publishing';}
 .friezeImg:before{content: 'Publishing';}
@@ -66,34 +68,63 @@
 .profile_wrap {position: relative;}
 .profilecont {padding: 20px; margin-bottom: 10px; display: flex; flex-direction: column; justify-content: flex-end;}
 .profilecontfull{padding:20px; margin-bottom: 10px; display: flex; justify-content: flex-end;}
-.profilecont{border-right: 1px solid rgba(0, 0, 0, 0.2); height: 100%;}
+.profilecont{border-left: 1px solid rgba(0, 0, 0, 0.2); height: 100%;}
 .profilecontfull{border-top: 1px solid rgba(0, 0, 0, 0.2);}
+.profilecont:first-child{border-left: none;}
 .profilecontfull:first-child{height: 40%;}
 .profilecontfull:last-child{height: 60%;}
 .profileTop {width: 100%; height: 40%; display: flex; justify-content: space-between; align-items: top;}
 .profilephoto{width: 20%;}
-.profileName, .profileContact{width: 40%;}
+.profileName, .profileContact{width: 50%;}
 .profileContact{border-right: none;}
 .profileName h2{font-size: 36px; font-family: 'Noto Sans KR', sans-serif; font-weight: bold;}
 .profileContact h2{font-size: 36px; font-family: 'Blinker', sans-serif; font-weight: 600;}
 .profileName p, .profileContact p{font-size: 20px;  font-family: 'Noto Sans KR', sans-serif; margin-top: 10px;}
 .profileBottom{height: 60%;}
 .profilecontfull h2{display: inline-block; width: 20%; font-size: 36px; font-family: 'Blinker', sans-serif; font-weight: 600;}
-.pcfBox{display: inline-block; width: 80%;}
-.profileSkill{display: flex; justify-content: space-between;}
-.pbBox{width: 60%;}
-.pbBox i{display: inline-block; margin-right: 20px; font-size: 115px;}
+.pbBox{display: flex; display: flex; gap: 20px; width: 80%; flex-wrap: wrap;}
+.pbBox img{display: block; width: 100px; height: 100px;}
 
-.designBox{width: 40%; display: flex; flex-wrap: wrap; justify-content: space-between;}
-.designBox span{display: inline-block; margin-right: 10px; margin-bottom: 10px; text-align: center; width: 165px; border: 3px solid #000; border-radius: 55px; font-size: 20px; padding: 12px 0; font-weight: 600; font-family: 'Noto Sans KR', sans-serif;}
-.designBox span:nth-child(even){margin-right: 0;}
-.designBox span:nth-child(3), .designBox span:nth-child(4){margin-bottom: 0;}
 .profileCareer div{margin-bottom: 12px;}
 .profileCareer div:last-child{margin-bottom: 0;}
 .profileCareer > div br{display: none}
+.pcfBox {width: 80%;}
 .careerYear{font-size: 32px; font-weight: 600; margin-bottom: 10px; font-family: 'Noto Sans KR', sans-serif;}
 .careerJob{font-size: 20px; font-family: 'Noto Sans KR', sans-serif;}
 
+@media all and (max-width: 1280px){
+    .content_container{width: calc(33.3333% - 22px);}
+    .title_box .title{font-size: 68px;}
+
+    .pbBox img{width: 80px; height: 80px;}
+}
+@media all and (max-width: 840px){
+    .content_container{width: calc(50% - 16px);}
+    .title_box{flex-direction: column; align-items: flex-start; gap: 28px; justify-content: center;}
+    .profileBtn{width: 300px; height: 300px;}
+    .rotateSmile{top: calc(50% - 82px); left: calc(50% - 80px); width: 112px; height: 112px;}
+
+    .wrapper{gap: 52px;}
+    .profileName, .profileContact{width: 100%;}
+    .profileTop{flex-direction: column;}
+    .profileName{border-bottom: 1px solid rgba(0, 0, 0, 0.2); margin-bottom: 0;}
+    .profileContact{border-left: none;}
+    .profilecontfull {flex-direction: column; gap: 20px;}
+    .pbBox, .pcfBox{width: 100%;}
+}
+@media all and (max-width: 580px){
+    .content_container{width: 100%;}
+    .title_box{gap: 20px;}
+    .title_box .title{font-size: 60px;}
+
+    .wrapper{gap: 40px;}
+
+    .profileBtn{position: relative; left: 22px;}
+}
+@media all and (max-width: 480px){
+    .title_box .title{font-size: 48px;}
+    .title_box .subBtn{font-size: 32px;}
+}
 
 
     
