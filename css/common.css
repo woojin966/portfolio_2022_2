@@ -57,13 +57,12 @@
 .textBox a br{display: none;}
 
 .titleBottom{position: relative;}
-.profileBtn{display: block; align-items: center; justify-content: center; width: 400px; height: 400px; margin: 0 auto; text-align: center;}
+.profileBtn{position: relative; left: 36px; display: block; align-items: center; justify-content: center; width: 400px; height: 400px; margin: 0 auto; text-align: center;}
 .rotateText{font-family: 'Blinker', sans-serif; font-size: 40px; font-weight: 600;}
 .rotateSmile{position: absolute; top: calc(50% - 104px); left: calc(50% - 102px); width: 140px; height: 140px; animation: rotate_image 6s linear infinite;}
 @keyframes rotate_image{
     100% {transform: rotate(360deg);}
 }
-
 
 .profile_wrap {position: relative;}
 .profilecont {padding: 20px; margin-bottom: 10px; display: flex; flex-direction: column; justify-content: flex-end;}
